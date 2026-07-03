@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #F9FAFB; /* Disamakan dengan warna abu-abu terang yang premium */
+    color: #4B5563; /* Menggunakan Slate Gray untuk teks global */
+}
+
+/* HEADER / NAVBAR */
+.navbar {
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1E3A8A; /* Deep Navy Blue */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo span {
+  color: #F59E0B; /* Vibrant Amber */
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #4B5563; /* Slate Gray */
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav .active {
+  color: #1E3A8A; /* Deep Navy Blue */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 8px 30px 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  width: 180px;
+}
+
+.search-box i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9CA3AF;
+}
+
+.cart-icon i {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #1E3A8A; /* Deep Navy Blue */
+}
+
+.cart-icon i:hover {
+  color: #F59E0B; /* Vibrant Amber */
+}
+
+.title {
+    margin: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E3A8A; /* Deep Navy Blue */
+}
+
+/* --- KONTENER UTAMA --- */
+.container {
+    width: 100%; 
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding-top: 5px;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+
+/* --- BAGIAN KIRI (LIST PRODUK) --- */
+.cart-kiri {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.04);
+}
+
+.select-all {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E5E7EB;
+    color: #1E3A8A; /* Deep Navy Blue */
+}
+
+/* CHECKBOX STYLING (Opsional, menyesuaikan warna browser) */
+.select-all input[type="checkbox"],
+.cart-item input[type="checkbox"] {
+    accent-color: #1E3A8A;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 30px 100px 80px 1fr 100px; 
+    gap: 10px;
+    padding: 15px 0;
+    align-items: center;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.product-shop {
+    font-size: 14px;
+    color: #4B5563; /* Slate Gray */
+    grid-column: 2 / span 2;
+}
+
+.product-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    grid-row: 2 / span; 
+    grid-column: 2;
+    object-fit: cover;
+}
+
+.product-info {
+    grid-column: 4;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E3A8A; /* Deep Navy Blue */
+}
+
+.discount-percent {
+    color: #EF4444; /* Warna merah warning yang clean untuk diskon */
+    font-size: 12px;
+    font-weight: 500;
+    background: #FEE2E2;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.price-discounted {
+    color: #1E3A8A; /* Diganti ke Deep Navy agar selaras dengan harga utama */
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.price-original {
+    text-decoration: line-through;
+    color: #9CA3AF;
+    font-size: 14px;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    color: #EF4444; /* Merah modern */
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-delete:hover {
+    color: #B91C1C;
+    transform: scale(1.1);
+}
+
+.note {
+    width: 100%;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    resize: none;
+    height: 40px;
+    color: #4B5563;
+}
+
+.note:focus {
+    border-color: #1E3A8A;
+    outline: none;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    grid-column: 5;
+}
+
+.qty-btn, .qty-input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #E5E7EB;
+    background: #fff;
+    color: #4B5563;
+}
+
+.qty-btn {
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.qty-btn:hover {
+    background-color: #EFF6FF; /* Sentuhan biru muda saat hover */
+    color: #1E3A8A;
+}
+
+.qty-input {
+    border-left: none;
+    border-right: none;
+}
+
+/* --- BAGIAN KANAN (RINGKASAN BELANJA) --- */
+.cart-right {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.04);
+    height: fit-content; 
+    position: static; 
+    top: 20px;
+}
+
+.cart-right h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1E3A8A; /* Deep Navy Blue */
+}
+
+/* VOUCHER BOX */
+.voucher-box {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px dashed #3B82F6; /* Diubah jadi biru putus-putus khas e-commerce */
+    border-radius: 8px;
+    background: #F0F4FF; /* Latar voucher biru super soft */
+}
+
+.voucher-box label {
+    font-size: 14px;
+    color: #1E3A8A;
+    display: block;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.voucher-box select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #3B82F6;
+    font-size: 14px;
+    color: #1E3A8A;
+    background: white;
+}
+
+.apply-voucher {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #1E3A8A; /* Menggunakan Deep Navy Blue */
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.apply-voucher:hover {
+    background-color: #1D4ED8;
+    transform: scale(1.02);
+}
+
+/* BUTTON BELANJA / CHECKOUT SEKARANG */
+.btn-checkout {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #F59E0B; /* Diubah ke Vibrant Amber sebagai CTA utama */
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-checkout:hover {
+    background-color: #D97706; /* Amber gelap saat hover */
+    transform: scale(1.03);
+}
+
+/* FOOTER */
+footer {
+  background: #111827; /* Dark Navy Slate agar menyatu dengan footer halaman lain */
+  color: white;
+  padding: 25px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer span {
+  color: #F59E0B; /* Vibrant Amber */
+}
+
+/* ===== RESPONSIVE (MOBILE) ===== */
+@media (max-width: 780px) {
+    .container {
+        grid-template-columns: 1fr; 
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .search {
+        order: 3;
+        width: 100%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quantity {
+        margin-top: 10px;
+    }
+
+    .product-img {
+        width: 100%;
+        height: auto;
+    }
+}

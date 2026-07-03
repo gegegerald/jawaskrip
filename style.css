@@ -1,0 +1,728 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #F9FAFB; /* Diubah ke abu-abu sangat terang agar lebih premium */
+  color: #4B5563; /* Diubah dari #333 ke Slate Gray */
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo span {
+  color: #F59E0B; /* Diubah ke Vibrant Amber */
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #4B5563; /* Diubah ke Slate Gray */
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav .active {
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue saat aktif/hover */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 8px 30px 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  width: 180px;
+}
+
+.search-box i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9CA3AF;
+}
+
+.cart-icon i {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue */
+}
+
+.cart-icon i:hover {
+  color: #F59E0B; /* Diubah ke Vibrant Amber */
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 50px;
+  background: linear-gradient(to right, #ffffff, #EFF6FF); /* Diubah ke gradien biru lembut */
+}
+
+.hero-content h1 {
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.hero-content .black {
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue */
+}
+
+.hero-content .orange {
+  color: #F59E0B; /* Diubah ke Vibrant Amber */
+}
+
+.hero-content p {
+  margin: 15px 0;
+  font-size: 18px;
+  color: #4B5563;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #F59E0B; /* Diubah ke Vibrant Amber */
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #D97706; /* Hover Amber yang lebih gelap */
+}
+
+.hero-image img {
+  width: 260px;
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Animasi */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ====== CATEGORY SECTION ====== */
+.categories {
+  padding: 50px 20px;
+}
+
+.categories h2 {
+  text-align: start;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue */
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+.category-card {
+  background: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.05); /* Bayangan soft blue */
+}
+
+/* ==== GAMBAR ==== */
+.category-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+
+/* ===== HOVER EFFECT ===== */
+.category-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.1);
+  background: #EFF6FF; /* Diubah ke soft blue tint */
+}
+
+.category-card:hover img {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.category-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue */
+}
+
+.category-card p {
+  color: #6B7280;
+  font-size: 14px;
+}
+
+/* REKOMENDASI PRODUK – NORMAL GRID */
+.recommended {
+  padding: 50px;
+  text-align: start;
+}
+
+.recommended h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #1E3A8A; /* Ditambahkan agar konsisten */
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(30, 58, 138, 0.04);
+  transition: 0.3s ease;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* GAMBAR PRODUK + HOVER ZOOM */
+.product-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.07);
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue */
+}
+
+.product-card .price {
+  font-size: 17px;
+  font-weight: 700;
+  color: #F59E0B; /* Diubah ke Vibrant Amber */
+  margin-bottom: 12px;
+}
+
+/* BUTTON BELI */
+.buy-btn,
+.product-card .btn {
+  width: 100%;
+  padding: 10px 0;
+  background: #F59E0B; /* Diubah ke Vibrant Amber */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* HOVER BUTTON */
+.buy-btn:hover,
+.product-card .btn:hover {
+  background: #D97706; /* Diubah ke Amber gelap */
+  transform: scale(1.05);
+}
+
+/* HOVER CARD */
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 28px rgba(30, 58, 138, 0.12);
+}
+
+/* PRODUK PAGE */
+.products-page {
+  padding: 50px;
+}
+
+.products-page h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #1E3A8A;
+}
+
+.products-page .subtitle {
+  color: #6B7280;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.cart-page {
+  padding: 50px 50px;
+}
+
+.cart-item {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(30, 58, 138, 0.04);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1E3A8A;
+}
+
+.cart-item input {
+  width: 60px;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid #E5E7EB;
+  text-align: center;
+}
+
+.cart-item .cart-price {
+  font-weight: 700;
+  color: #F59E0B; /* Diubah ke Vibrant Amber */
+}
+
+/* ABOUT US PAGE */
+.about-section {
+  padding: 60px 50px;
+  background: linear-gradient(to right, #ffffff, #EFF6FF); /* Diubah ke gradien biru lembut */
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue */
+}
+
+.about-text p {
+  font-size: 16px;
+  margin-bottom: 18px;
+  color: #4B5563;
+}
+
+.about-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.about-list li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4B5563;
+}
+
+.about-list i {
+  color: #F59E0B; /* Diubah ke Vibrant Amber */
+  font-size: 18px;
+}
+
+.about-image img {
+  width: 330px;
+  animation: float 3s infinite ease-in-out;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.auth-box {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(30, 58, 138, 0.08);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.auth-box h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue */
+}
+
+.auth-box .subtitle {
+  font-size: 14px;
+  color: #6B7280;
+  margin-bottom: 25px;
+}
+
+/* INPUT GROUP */
+.auth-box .input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.auth-box .input-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+  color: #4B5563;
+}
+
+.auth-box .input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.auth-box .input-group input:focus {
+  border-color: #1E3A8A; /* Focus diubah ke Deep Navy Blue */
+  box-shadow: 0 0 5px rgba(30, 58, 138, 0.2);
+  outline: none;
+}
+
+/* BUTTON AUTH */
+.btn-auth {
+  width: 100%;
+  padding: 12px;
+  background: #F59E0B; /* Diubah ke Vibrant Amber */
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.btn-auth:hover {
+  background: #D97706;
+}
+
+/* SWITCH TO OTHER PAGE */
+.switch {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue agar terlihat resmi */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+  color: #F59E0B; /* Berubah amber saat hover */
+}
+
+/* CONTACT HERO & SECTION */
+.contact-hero {
+  padding: 80px 5%;
+  text-align: center;
+  background: linear-gradient(to right, #1E3A8A, #3B82F6); /* Diubah dari oranye ke Gradien Navy-Blue */
+  color: white;
+}
+
+.contact-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.contact {
+  padding: 60px 5%;
+  background: #F3F4F6;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #1E3A8A; /* Diubah ke Deep Navy Blue */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  width: 45%;
+  text-align: left;
+}
+
+.contact-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #1E3A8A;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  color: #F59E0B; /* Diubah ke Vibrant Amber */
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+/* FORM CONTACT */
+.contact-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #1E3A8A;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #E5E7EB;
+  outline: none;
+  font-size: 15px;
+  background: white;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form .btn {
+  background: #F59E0B; /* Diubah ke Vibrant Amber */
+  border: none;
+  padding: 12px;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact-form .btn:hover {
+  background: #D97706;
+}
+
+/* MAP SECTION */
+.map-section {
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #1E3A8A;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #111827; /* Diubah ke Dark Navy Slate yang lebih solid */
+  color: #fff;
+  margin-top: 40px;
+  padding: 50px 5% 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+}
+
+.footer-section h3 span {
+  color: #F59E0B; /* Diubah ke Vibrant Amber */
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  position: relative;
+  color: #F3F4F6;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 14px;
+  color: #9CA3AF;
+  margin-bottom: 8px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #9CA3AF;
+  transition: 0.3s;
+}
+
+.footer-section a:hover {
+  color: #F59E0B; /* Diubah ke Vibrant Amber */
+}
+
+.social-links a {
+  font-size: 18px;
+  margin-right: 12px;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #F59E0B;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #374151;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #9CA3AF;
+}
+
+.footer-bottom span {
+  color: #F59E0B;
+}
+
+/* KEYFRAMES & RESPONSIVE (Tetap Dipertahankan) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes slideRight { to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+@media(max-width:600px){
+  .footer-container { text-align: center; }
+  .social-links { justify-content: center; display: flex; }
+}
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: center; }
+  .category-container, .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .navbar { padding: 15px 25px; }
+  .products-page { padding: 25px; }
+  .contact-container { flex-direction: column; }
+  .contact-info, .contact-form { width: 100%; }
+  .about-container { flex-direction: column-reverse; text-align: center; }
+  .about-image img { width: 250px; }
+}
+@media (max-width: 480px) {
+  .category-container, .product-grid { grid-template-columns: repeat(1, 1fr); }
+  .hero-content h1 { font-size: 40px; }
+  .auth-box { padding: 28px 22px; }
+  .auth-box h2 { font-size: 24px; }
+}

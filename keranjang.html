@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="keranjang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-bag-shopping"></i> Belanja<span>Kuy</span>
+        </div>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="About_Us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="search-box">
+                <input type="text" placeholder="Cari Produk..." />
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="cart-icon">
+                <a class="active" href="keranjang.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="title">Keranjang Belanja</div>
+
+    <div class="container">
+
+        <div class="cart-kiri">
+
+            <div class="select-all">
+                <input type="checkbox" id="select-all" checked>
+                <label for="select-all">Pilih Semua</label>
+            </div>
+
+            <div class="cart-item">
+                <input type="checkbox" checked>
+                <div class="product-shop">Audio Pro</div>
+
+                <img src="asset\inearmonitor.jpeg" alt="" class="product-img">
+
+                <div class="product-info">
+                    <div class="product-name">KZ Saga High Performance In Ear Monitor</div>
+                    <div class="discount-percent">Diskon 62%</div>
+                    <div class="price-discounted">Rp721.620</div>
+                    <div class="price-original">Rp1.899.000</div>
+                    <button class="btn-delete">Hapus</button>
+                    <textarea class="note" placeholder="Catatan"></textarea>
+                </div>
+
+                <div class="quantity-control">
+                    <button class="qty-btn minus">-</button>
+                    <input type="number" class="qty-input" value="1" min="1">
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <input type="checkbox" checked>
+                <div class="product-shop">Jaya PC</div>
+
+                <img src="asset\psu.jpeg" alt="" class="product-img">
+
+                <div class="product-info">
+                    <div class="product-name">MSI MAG A550BN 550W PSU</div>
+                    <div class="price-discounted">Rp729.000</div>
+                    <button class="btn-delete">Hapus</button>
+                    <textarea class="note" placeholder="Catatan"></textarea>
+                </div>
+
+                <div class="quantity-control">
+                    <button class="qty-btn minus">-</button>
+                    <input type="number" class="qty-input" value="1" min="1">
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <input type="checkbox" checked>
+                <div class="product-shop">ACEKOMPUTER</div>
+
+                <img src="asset\ram.jpeg" alt="" class="product-img">
+
+                <div class="product-info">
+                    <div class="product-name">RAM KINGSTON HYPER X GAMING DDR4 8GB</div>
+                    <div class="price-discounted">Rp3.220.000</div>
+                    <button class="btn-delete">Hapus</button>
+                    <textarea class="note" placeholder="Catatan"></textarea>
+                </div>
+
+                <div class="quantity-control">
+                    <button class="qty-btn minus">-</button>
+                    <input type="number" class="qty-input" value="1" min="1">
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <input type="checkbox" checked>
+                <div class="product-shop">Abditama Ofc</div>
+
+                <img src="asset\monitor.jpeg" alt="" class="product-img">
+
+                <div class="product-info">
+                    <div class="product-name">Monitor Ultrawide LED Xiaomai G34WQi 34"</div>
+                    <div class="discount-percent">Diskon 20%</div>
+                    <div class="price-discounted">Rp4.392.000</div>
+                    <div class="price-original">Rp5.490.000</div>
+                    <button class="btn-delete">Hapus</button>
+                    <textarea class="note" placeholder="Catatan"></textarea>
+                </div>
+
+                <div class="quantity-control">
+                    <button class="qty-btn minus">-</button>
+                    <input type="number" class="qty-input" value="1" min="1">
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <input type="checkbox" checked>
+                <div class="product-shop">Toko Audio Pro</div>
+
+                <img src="asset\kamera.jpeg" alt="" class="product-img">
+
+                <div class="product-info">
+                    <div class="product-name">Sony A1 II Body Only Mirrorless Camera</div>
+                    <div class="price-discounted">Rp30.450.000</div>
+                    <button class="btn-delete">Hapus</button>
+                    <textarea class="note" placeholder="Catatan"></textarea>
+                </div>
+
+                <div class="quantity-control">
+                    <button class="qty-btn minus">-</button>
+                    <input type="number" class="qty-input" value="1" min="1">
+                    <button class="qty-btn plus">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-right">
+            <h3>Ringkasan Belanja</h3>
+
+            <div class="voucher-box">
+                <p>Pakai Voucher Untuk Potongan Harga</p>
+                <label for="voucher-promo">Voucher Promo:</label>
+                <select id="voucher-promo">
+                    <option>-- Pilih Voucher --</option>
+                    <option>Gratis Ongkir</option>
+                    <option>Diskon 5%</option>
+                    <option>Diskon 10%</option>
+                    <option>Diskon 30%</option>
+                </select>
+                <button class="apply-voucher">Pakai</button>
+            </div>
+
+            <button class="btn btn-checkout" onclick="window.location.href='pembayaran.html'">
+    Belanja Sekarang
+</button>
+
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 <span>BelanjaKuy</span>. All rights reserved.</p>
+    </footer>
+<script src="jawascript.js"></script>
+</body>
+</html>
+</body>
+
+</html>

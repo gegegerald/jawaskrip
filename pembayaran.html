@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="pembayaran.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-bag-shopping"></i> Belanja<span>Kuy</span>
+        </div>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="About_Us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="search-box">
+                <input type="text" placeholder="Cari Produk..." />
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="cart-icon">
+                <a href="keranjang.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="title">Metode Pembayaran</div>
+
+    <div class="container">
+
+        <!-- KIRI: PEMILIHAN METODE -->
+        <div class="left-box">
+            <h3>Pilih Metode Pembayaran</h3>
+
+            <div class="payment-option">
+                <input type="radio" name="payment" id="bank">
+                <label for="bank" class="payment-card">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span>Transfer Bank</span>
+                </label>
+            </div>
+
+            <div class="payment-option">
+                <input type="radio" name="payment" id="paylater">
+                <label for="paylater" class="payment-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Paylater</span>
+                </label>
+            </div>
+
+            <div class="payment-option">
+                <input type="radio" name="payment" id="cash">
+                <label for="cash" class="payment-card">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    <span>Cash</span>
+                </label>
+            </div>
+
+            <div class="payment-option">
+                <input type="radio" name="payment" id="cod">
+                <label for="cod" class="payment-card">
+                    <i class="fa-solid fa-truck"></i>
+                    <span>COD (Bayar di Tempat)</span>
+                </label>
+            </div>
+
+            <button class="btn-pembayaran">Lanjutkan Pembayaran</button>
+        </div>
+
+        <!-- KANAN: RINGKASAN -->
+        <div class="right-box">
+            <h3>Ringkasan Belanja</h3>
+
+            <div class="summary">
+                <p>Total Produk: <span>Rp 39.512.620</span></p>
+                <p>Ongkos Kirim: <span>Rp 1.120.000</span></p>
+                <p>Voucher: <span>Rp 0</span></p>
+                <hr>
+                <p class="total">Total Bayar: <span>Rp 40.632.620</span></p>
+            </div>
+
+            <button class="btn-bayar">Bayar Sekarang</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2025 <span>BelanjaKuy</span>. All rights reserved.</p>
+    </footer>
+
+<script src="jawascript.js"></script>
+</body>
+</html>
+</body>
+
+</html>
