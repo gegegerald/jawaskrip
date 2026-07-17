@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Denim - BelanjaKuy</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-bag-shopping"></i> Belanja<span>Kuy</span>
+      </div>
+
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="product.html" class="active">Products</a>
+        <a href="About_us.html">About us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" placeholder="Cari Produk..." />
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="cart-icon">
+          <a href="keranjang.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+    </header>
+    <!-- PRODUCT DETAIL -->
+    <section class="product-detail">
+      <div class="detail-container" style="display:flex;gap:50px;align-items:flex-start;flex-wrap:wrap;">
+        <div class="detail-image" style="flex:0 0 320px;max-width:320px;">
+          <img src="asset\denim.jpeg" alt="Premium Denim" style="width:100%;max-width:320px;height:320px;object-fit:cover;border-radius:20px;display:block;" />
+        </div>
+
+        <div class="detail-info" style="flex:1;min-width:280px;">
+          <span class="detail-category">Fashion</span>
+          <h1>Premium Denim</h1>
+
+          <div class="detail-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            4.7 <span>(121 ulasan)</span>
+          </div>
+
+          <p class="detail-price">Rp 570.000</p>
+
+          <p class="detail-desc">Jeans denim premium dengan potongan modern dan bahan yang nyaman dipakai bergerak. Warna tahan lama dan cocok dipadukan dengan berbagai gaya, dari casual sampai smart-casual.</p>
+
+          <ul class="detail-specs">
+          <li><i class="fa-solid fa-circle-check"></i> Bahan denim premium stretch</li>
+          <li><i class="fa-solid fa-circle-check"></i> Potongan slim modern</li>
+          <li><i class="fa-solid fa-circle-check"></i> Warna tidak mudah pudar</li>
+          <li><i class="fa-solid fa-circle-check"></i> Tersedia size 28-36</li>
+          </ul>
+
+          <div class="qty-selector">
+            <span>Jumlah</span>
+            <div class="qty-box">
+              <button type="button" onclick="ubahJumlah(-1)">-</button>
+              <input type="text" id="qty" value="1" readonly />
+              <button type="button" onclick="ubahJumlah(1)">+</button>
+            </div>
+          </div>
+
+          <div class="detail-actions">
+            <button class="btn-outline" type="button">Tambah ke Keranjang</button>
+            <a href="keranjang.html" class="btn">Beli Sekarang</a>
+          </div>
+
+          <p class="detail-note">
+            <i class="fa-solid fa-truck"></i> Pengiriman ke seluruh Indonesia, estimasi 2-4 hari kerja.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="related-products">
+      <h2>Produk Terkait</h2>
+      <div class="product-container">
+        <div class="product-card">
+          <a href="black-sneakers.html">
+            <img src="asset\Streetwear Black Sneakers.jpeg" alt="Black Sneakers" />
+            <h3>Black Sneakers</h3>
+          </a>
+          <p class="price">Rp 350.000</p>
+          <a href="black-sneakers.html" class="btn">Lihat Produk</a>
+        </div>
+        <div class="product-card">
+          <a href="sport-runner-x.html">
+            <img src="asset\Sport Running Shoes.jpeg" alt="Sport Runner X" />
+            <h3>Sport Runner X</h3>
+          </a>
+          <p class="price">Rp 690.000</p>
+          <a href="sport-runner-x.html" class="btn">Lihat Produk</a>
+        </div>
+        <div class="product-card">
+          <a href="casual-slip-on.html">
+            <img src="asset\Casual Slip-On.jpeg" alt="Casual Slip-On" />
+            <h3>Casual Slip-On</h3>
+          </a>
+          <p class="price">Rp 299.000</p>
+          <a href="casual-slip-on.html" class="btn">Lihat Produk</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+
+        <div class="footer-section">
+          <h3><i class="fa-solid fa-bag-shopping"></i> Belanja<span>Kuy</span></h3>
+          <p>Toko fashion dan elektronik terpercaya, harga nyaman dompet, kualitas premium.</p>
+
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="product.html">Produk</a></li>
+            <li><a href="About_Us.html">Tentang Kami</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Bantuan</h4>
+          <ul>
+            <li><a href="#">Cara Belanja</a></li>
+            <li><a href="#">Pengiriman</a></li>
+            <li><a href="#">Kebijakan Refund</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Kontak Kami</h4>
+          <p><i class="fa-solid fa-location-dot"></i> Salatiga, Indonesia</p>
+          <p><i class="fa-solid fa-envelope"></i> @belanjakuy.id</p>
+          <p><i class="fa-solid fa-phone"></i> +62 812-3456-7890</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 <span>BelanjaKuy</span>. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function ubahJumlah(delta) {
+        const input = document.getElementById('qty');
+        let val = parseInt(input.value) + delta;
+        if (val < 1) val = 1;
+        input.value = val;
+      }
+    </script>
+    <script src="jawascript.js"></script>
+  </body>
+</html>
